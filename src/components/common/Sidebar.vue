@@ -27,10 +27,14 @@
   })
 </script>
 
-<style scoped>
+<style scoped lang="less" rel="stylesheet/less">
   .title{
     position:fixed;
     bottom:0;
-    left:0
+    left:0;
+    p:first-child{
+        position: absolute;
+        top:-0.93rem;
+    }
   }
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div>
     <ul class="products clear">
-        <li class="pro-items" v-for="(item,i) in list" :key="i">
+        <li class="items lf" v-for="(item,i) in list" :key="i">
           <router-link tag="p" :to="{path:item.path}">
             <img :src="item.src" alt="">
           </router-link>
-          <p><a href="">{{item.title}}</a></p>
-          <p><a href="">{{item.type}}</a></p>
+          <div class=""><a href="">{{item.title}}</a></div>
+          <div><a href="">{{item.type}}</a></div>
         </li>
       </ul>
   </div>
@@ -58,26 +58,34 @@
   })
 </script>
 
-<style scoped>
-  .pro-items{
-    float:left;
-    margin:20px 25px;
-    width:170px;
-  }
-  .pro-items a{
-    font-size:12px;
+<style scoped lang="less" rel="stylesheet/less">
+  
+  .items{
+    margin:.2rem .25rem;
+    width:1.7rem;
+    p{
+      display:table-cell;
+      border:1px solid #ddd;
+      padding:.05rem;
+      text-align:center;
+      cursor: pointer;
 
+      img{
+        vertical-align:middle;
+      }
+     
+    }
+    div{
+      margin:.05rem 0 0 0;
+      font-size:.12rem;
+      text-align:center;
+      a{
+        color:#666;
+        &:hover{
+          color:#CC0000
+        }
+      }
+    }
   }
-  .pro-items p:first-child{
-    border:1px solid #ddd;
-    padding:5px;
-    text-align:center;
-    cursor: pointer;
-  }
-  .pro-items p:nth-child(2),.pro-items p:last-child{
-    text-align:center
-  }
-  .pro-items p:nth-child(2)>a:hover,.pro-items p:last-child>a:hover{
-    color:#CC0000
-  }
+  
 </style>

@@ -50,14 +50,14 @@
           <Aside :ulList="ulList2"></Aside>
           <Aside :ulList="ulList3"></Aside>
           <div class="side">
-            <h3 class="side-title">苏州埃兰手机版</h3>
+            <h3 class="side_title">苏州埃兰手机版</h3>
             <img src="../assets/img/erweima.png" alt="">
           </div>
         </div>
         <div class="right lf">
           <div class="bg">
             <h3>{{navList[nowIdx].param}}</h3>
-            <router-link tag="a" :to="{path:'/'}">更多...</router-link>
+            <router-link tag="a" :to="{path:'/'}" v-if="nowIdx==0">更多...</router-link>
           </div>
           <div class="bottom">
             <router-view></router-view>
@@ -133,162 +133,191 @@
   })
 </script>
 
-<style scoped>
+<style scoped lang="less" rel="stylesheet/less">
   .top{
     position:relative;
-    min-height:60px;
-    margin:20px 0 20px 0;
+    min-height:.6rem;
+    margin:.2rem 0 .2rem 0;
   }
   .title{
     position:absolute;
-    font-size:28px;
-   padding:0 0 0 10px; 
+    font-size:.28rem;
+   padding:0 0 0 .1rem; 
   }
   .tel{
     position:absolute;
-    /* top:-10px; */
     right:0
   }
-  .tel :first-child{
-    font-size:24px;
-    padding:0 0 5px 30px;
-    color:#DA513F; 
-    background:url('../assets/img/tel.gif') no-repeat center left
-  }
-  .tel :last-child{
-    text-align:center;
-    font-size:12px;
-    color:#999;
+  .tel{
+    & :first-child{
+      font-size:.24rem;
+      padding:0 0 .05rem .3rem;
+      color:#DA513F; 
+      background:url('../assets/img/tel.gif') no-repeat center left
+    }
+    & :last-child{
+      text-align:center;
+      font-size:.12rem;
+      color:#999;
+    }
   }
   nav{
     width:100%;
     background:#0B6AB3;
-    /* margin:0 0 20px 0; */
+
+    .nav-item{
+      color:#fff;
+      padding:.10rem;
+      font-size:.16rem;
+      cursor: pointer;
+    }
+    .nav-item:hover{
+      background:#4AA4E2
+    }
   }
-  .nav-item{
-    color:#fff;
-    padding:10px;
-    cursor: pointer;
-  }
-  .nav-item:hover{
-    background:#4AA4E2
-  }
+  
   .box{
     width:100%;
     background:#F1F3F5;
   }
   .left{
-    width:240px;
+    width:2.4rem;
   }
   .member{
-    margin:0 0 10px 0;
-  }
-  .member>i{
-    display:inline-block;
-    width:30px;
-    height:38px;
-    background:url('../assets/img/step32.gif') no-repeat -130px;
-    transform:translatey(12px);
-    margin:0 3px 0 0;
+    margin:0 0 .1rem 0;
+    font-size:.17rem;
+
+    >i{
+      display:inline-block;
+      width:.3rem;
+      height:.38rem;
+      background:url('../assets/img/step32.gif') no-repeat -0.62rem .05rem;
+      transform:translatey(.12rem);
+      margin:0 .1rem 0 0;
+    }
   }
   .left1,.left2{
     border:1px solid #D7D7D7;
     padding:10px;
     background:#fff;
     position:relative;
-    margin:10px 0;
+    margin:.1rem 0;
   }
-  .left1>p{
-    color:#666;
-    font-size:12px;
-    height:40px;
-    background:url('../assets/img/tel2.gif') no-repeat left center/20%;
-    padding:0 0 0 48px;
-    line-height:40px;
+  .left1{
+    >p{
+      color:#666;
+      font-size:.12rem;
+      height:.4rem;
+      background:url('../assets/img/tel2.gif') no-repeat left center/20%;
+      padding:0 0 0 .48rem;
+      line-height:.4rem;
+    }
+    >div:nth-child(2){
+      color:#0078B6;
+      font-size:.22rem;
+    }
+    >ul{
+      font-size:.12rem;
+      >li{
+        margin:.1rem 0 .1rem 0;
+      }
+    }
+    >img{
+      position:absolute;
+      bottom:.15rem;
+      right:.03rem;
+    }
   }
-  .left1>div:nth-child(2){
-    color:#0078B6;
-    font-size:22px;
-  }
-  .left1>ul{
-    font-size:12px;
-  }
-  .left1>ul>li{
-    margin:10px 0 10px 0;
-  }
-  .left1>img{
-    position:absolute;
-    bottom:15px;
-    right:3px;
-  }
-  .left2>h4{
-    color:#F48408;
-    text-align:center;
-  }
-  .left2>h4>b{
-    font-size:1.1em;
+
+  .left2{
+    >h4{
+      color:#F48408;
+      text-align:center;
+      font-size:.16rem;
+
+      >b{
+        font-size:.2rem;
+      }
+    }
   }
   .side{
-    margin:15px 0;
+    margin:.15rem 0;
+
+    >.side_title{
+      margin:.1rem 0;
+      padding:.03rem .1rem;
+      font-size:.18rem;
+      border-left:.04rem solid #1C5DA5
+    }
+    >ul{
+      border-top:.02rem solid #ddd;
+      border-left:.01rem solid #ddd;
+      border-right:.01rem solid #ddd;
+      background:#fff;
+
+      >li{
+        cursor: pointer;
+        padding:6px 25px;
+        background:url('../assets/img/learr.gif') no-repeat 0 -0.3rem;
+        border-bottom:1px solid #ddd;
+        font-size:12px;
+
+        &:hover{
+          background:url('../assets/img/learr.gif') no-repeat 0 -.01rem;
+          background-color:#E3F5FF;
+          color:#1C5DA5
+        }
+      }
+    }
   }
-  .side>h3{
-    margin:10px 0;
-    padding:3px 10px;
-    border-left:4px solid #1C5DA5
-  }
-  .side>ul{
-    border-top:2px solid #ddd;
-    border-left:1px solid #ddd;
-    border-right:1px solid #ddd;
-    background:#fff;
-  }
-  .side>ul>li{
-    cursor: pointer;
-    padding:6px 25px;
-    background:url('../assets/img/learr.gif') no-repeat 0 -30px;
-    border-bottom:1px solid #ddd;
-    font-size:12px;
-  }
-  .side>ul>li:hover{
-    background:url('../assets/img/learr.gif') no-repeat 0 -1px;
-    background-color:#E3F5FF;
-    color:#1C5DA5
-  }
+
   .foot{
     text-align:center;
-    font-size:12px;
+    font-size:.12rem;
     background:#C6C8CC;
-    padding:10px 0;
+    padding:.10rem 0;
     color:#666;
+    a{
+      color:#666;
+    }
   }
+
   .right{
-    margin:20px 0 0 20px;
-    width:700px
+    margin:.2rem 0 0 .2rem;
+    width:7rem;
+
+    h3{
+      font-size:.18rem;
+    }
+    .bg{
+      width:100%;
+      height:.4rem;
+      background:url('../assets/img/lbnbg.gif') no-repeat;
+      position:relative;
+
+      >h3{
+        color:#fff;
+        position:absolute;
+        font-weight:normal;
+        top:.08rem;
+        left:.20rem;
+      }
+      >a{
+        position:absolute;
+        bottom:.05rem;
+        font-size:.14rem;
+        color:#222;
+        right:0;
+        color:#666;
+      }
+    }
+    .bottom{
+      width:100%;
+      background:#fff;
+      border:.01rem solid #ddd;
+      border-top:none;
+    }
   }
-  .bg{
-    width:100%;
-    height:40px;
-    background:url('../assets/img/lbnbg.gif') no-repeat;
-    position:relative;
-  }
-  .bg>h3{
-    color:#fff;
-    position:absolute;
-    font-weight:normal;
-    top:8px;
-    left:20px;
-  }
-  .bg>a{
-    position:absolute;
-    bottom:5px;
-    font-size:14px;
-    color:#222;
-    right:0;
-  }
-  .bottom{
-    width:100%;
-    background:#fff;
-    border:1px solid #ddd;
-    border-top:none;
-  }
+  
+  
 </style>

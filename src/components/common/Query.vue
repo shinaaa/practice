@@ -95,92 +95,99 @@
   })
 </script>
 
-<style scoped>
+<style scoped lang="less" rel="stylesheet/less">
   .query{
-    width:320px;
+    width:3.2rem;
     position:fixed;
     right:0;
-    bottom:0px;
+    bottom:0;
     z-index:100;
+    font-size:.14rem;
+    .ask{
+      cursor: pointer;
+      width:100%;
+      height:.3rem;
+      border-radius:.03rem;
+      color:#fff;
+      text-align:center;
+      line-height:.3rem;
+      font-size:.14rem;
+      background:linear-gradient(to bottom,#DE6858,#DA513F);
+      &:hover{
+        background:linear-gradient(to bottom,#CF4234,#DA513F);
+      }
+      img{
+        vertical-align:middle;
+      }
+    }
+    .bee{
+      position:absolute;
+      width:.75rem;
+      top:-0.75rem;
+      right:0;
+    }
+    .down{
+      width:100%;
+      height:0;
+      background:#F1F3F5;
+      overflow:hidden;
+      font-size:.14rem;
+      transition:height .3s linear;
+      div{
+        margin:.1rem 0;
+      }
+      label{
+        display:inline-block;
+        width:.84rem;
+        text-align:right;
+        span{
+          color:#FB7C4C;
+        }
+      }
+      .ipt{
+        width:1.9rem;
+        height:.25rem;
+        padding:0 .03rem;
+        border-radius:.03rem;
+        border:1px solid #D7D7D7;
+        outline:none;
+        &:focus{
+          border:1px solid #9FC2FA
+        }
+      }
+      textarea{
+        width:1.9rem;
+        padding:.03rem;
+        border-radius:.03rem;
+        border:1px solid #D7D7D7;
+        outline:none;
+        resize: none;
+        &:focus{
+          border:1px solid #9FC2FA;
+        }
+      }
+      .btn{
+        width:.75rem;
+        height:.28rem;
+        background:linear-gradient(to bottom,#DE6858,#DA513F);
+        color:#fff;
+        line-height:.28rem;
+        text-align:center;
+        border:none;
+        border-radius:.03rem;
+        outline:none;
+        cursor: pointer;
+        &:hover{
+          background:linear-gradient(to bottom,#CF4234,#DA513F);
+        }
+      }
+    }
+    .show{
+      height:5rem;
+      transition:height .3s linear;
+      border:1px solid #D7D7D7;
+      padding:.1rem 0 0 .2rem;
+    }
   }
-  .ask{
-    cursor: pointer;
-    width:100%;
-    height:30px;
-    border-radius:3px;
-    color:#fff;
-    text-align:center;
-    line-height:30px;
-    font-size:14px;
-    background:linear-gradient(to bottom,#DE6858,#DA513F)
-    
-  }
-  .ask:hover{
-    background:linear-gradient(to bottom,#CF4234,#DA513F);
-  }
-  .ask>img{
-    vertical-align:middle;
-  }
-  .bee{
-    position:absolute;
-    width:75px;
-    top:-75px;
-    right:0;
-  }
-  .down{
-    width:100%;
-    height:0px;
-    background:#F1F3F5;
-    overflow:hidden;
-    font-size:14px;
-    transition:height .3s linear;
-  }
-  .show{
-    height:500px;
-    transition:height .3s linear;
-    border:1px solid #D7D7D7;
-    padding:10px 0 0 20px;
-  }
-  .down>div{
-    margin:10px 0
-  }
-  label{
-    display:inline-block;
-    width:84px;
-    text-align:right;
-  }
-  .ipt{
-    width:190px;
-    height:25px;
-    padding:0 3px;
-    border-radius:3px;
-    border:1px solid #D7D7D7;
-    outline:none;
-  }
-  textarea{
-    width:190px;
-    padding:3px;
-    border-radius:3px;
-    border:1px solid #D7D7D7;
-    outline:none;
-    resize: none
-  }
-  .ipt:focus,textarea:focus{
-    border:1px solid #9FC2FA
-  }
-  .btn{
-    width:75px;
-    height:28px;
-    background:linear-gradient(to bottom,#DE6858,#DA513F);
-    color:#fff;
-    line-height:28px;
-    text-align:center;
-    border:none;
-    border-radius:3px;
-    outline:none;
-    cursor: pointer;
-  }
-  .btn:hover{
-    background:linear-gradient(to bottom,#CF4234,#DA513F);
-  }
+
 </style>

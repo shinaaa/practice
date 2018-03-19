@@ -1,6 +1,6 @@
 <template>
   <div class="side">
-    <h3 class="side-title">{{ulList[0].title}}</h3>
+    <h3 class="side_title">{{ulList[0].title}}</h3>
     <ul>
       <router-link tag="li" v-for="(item,i) in ulList[0].list" :key="i" :to="{path:item.path}" >
         {{item.name}}
@@ -31,31 +31,35 @@
   })
 </script>
 
-<style scoped>
+<style scoped lang="less" rel="stylesheet/less">
   .side{
-    margin:15px 0;
-  }
-  .side>h3{
-    margin:10px 0;
-    padding:3px 10px;
-    border-left:4px solid #1C5DA5
-  }
-  .side>ul{
-    border-top:2px solid #ddd;
-    border-left:1px solid #ddd;
-    border-right:1px solid #ddd;
-    background:#fff;
-  }
-  .side>ul>li{
-    cursor: pointer;
-    padding:6px 25px;
-    background:url('../../assets/img/learr.gif') no-repeat 0 -30px;
-    border-bottom:1px solid #ddd;
-    font-size:12px;
-  }
-  .side>ul>li:hover{
-    background:url('../../assets/img/learr.gif') no-repeat 0 -1px;
-    background-color:#E3F5FF;
-    color:#1C5DA5
+    margin:.15rem 0;
+
+      >.side_title{
+      margin:.1rem 0;
+      padding:.03rem .1rem;
+      font-size:.18rem;
+      border-left:.04rem solid #1C5DA5
+    }
+    >ul{
+      border-top:.02rem solid #ddd;
+      border-left:.01rem solid #ddd;
+      border-right:.01rem solid #ddd;
+      background:#fff;
+
+      >li{
+        cursor: pointer;
+        padding:.06rem .25rem;
+        background:url('../../assets/img/learr.gif') no-repeat 0 -0.3rem;
+        border-bottom:.01rem solid #ddd;
+        font-size:.12rem;
+
+        &:hover{
+          background:url('../../assets/img/learr.gif') no-repeat 0 -0.01rem;
+          background-color:#E3F5FF;
+          color:#1C5DA5
+        }
+      }
+    }
   }
 </style>

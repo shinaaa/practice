@@ -1,6 +1,6 @@
 <template>
-  <div>
-    解决方案
+  <div class="main">
+    资质荣誉
   </div>
 </template>
 
@@ -9,3 +9,10 @@
     
   })
 </script>
+
+<style scoped lang="less" rel="stylesheet/less">
+  .main{
+    font-size:.16rem;
+    padding:.2rem;
+  }
+</style>

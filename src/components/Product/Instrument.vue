@@ -5,7 +5,7 @@
         <img :src="item.src" alt="">
       </div>
       <div class="right lf">
-        <h3 style="font-weight:normal;margin-left:10px">{{item.title}}</h3>
+        <h3>{{item.title}}</h3>
         <table>
           <tr>
             <td>参考报价：<span style="color:#D8513E">{{item.price}}</span></td>
@@ -106,46 +106,55 @@
   })
 </script>
 
-<style scoped>
+<style scoped lang="less" rel="stylesheet/less">
   .main{
-    padding:10px 20px;
+    padding:.1rem .2rem;
+
+    .list{
+      padding:.15rem 0;
+      border-bottom:1px solid #ddd;
+
+      .right{
+        position:relative;
+        h3{
+          font-size:.22rem;
+          font-weight:normal;
+          margin-left:.12rem;
+        }
+        table{
+          font-size:.12rem;
+          margin:0 0 0 .1rem;
+
+          td{
+            color:#666;
+            width:2.4rem;
+            padding:3px 0;
+
+            span{
+              color:#000
+            }
+            img{
+              transform:translateY(2px);
+            }
+          }
+        }
+        a{
+          position:absolute;
+          right:.5rem;
+          width:.85rem;
+          height:.23rem;
+          line-height:.23rem;
+          text-align:center;
+          color:#fff;
+          border-radius:3px;
+          background:linear-gradient(to bottom,#6CC3FE,#59B4F2);
+
+          &:hover{
+            background:linear-gradient(to bottom,#4EAEFD,#2F8FED);
+          }
+        } 
+      }
+    }
   }
-  .list{
-    padding:15px 0;
-    border-bottom:1px solid #ddd;
-  }
-  table{
-    font-size:12px;
-    margin:0 0 0 10px;
-  }
-  td{
-    color:#666
-  }
-  td>span{
-    color:#000
-  }
-  td{
-    width:240px;
-    padding:3px 0;
-  }
-  td>img{
-    transform:translateY(2px);
-  }
-  .right{
-    position:relative
-  }
-  .right>a{
-    position:absolute;
-    right:50px;
-    width:85px;
-    height:23px;
-    line-height:23px;
-    text-align:center;
-    color:#fff;
-    border-radius:3px;
-    background:linear-gradient(to bottom,#6CC3FE,#59B4F2)
-  }
-  .right>a:hover{
-    background:linear-gradient(to bottom,#4EAEFD,#2F8FED)
-  }
+  
 </style>

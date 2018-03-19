@@ -1,9 +1,46 @@
-body,div,p,span,ul,ol,li,h1,h2,h3,h4,h5,h6,dl,dt,dd,a,i,nav,form,input,textarea{
+@charset "utf-8";
+/*默认1380px*/
+html{
+  font-size:100px;
+}
+@media (max-width: 1000px) {
+  html {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 43px;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 28px;
+  }
+}
+
+*{
   box-sizing: border-box;
   margin:0;
-  padding:0;
+  padding:0; 
+}
+
+ul,ol{
   list-style: none;
-  text-decoration: none;
 }
 .container{
   width:960px;
@@ -21,5 +58,5 @@ body,div,p,span,ul,ol,li,h1,h2,h3,h4,h5,h6,dl,dt,dd,a,i,nav,form,input,textarea{
   clear: both;
 }
 a{
-  color:#444;
+  text-decoration: none;
 }

@@ -15,12 +15,12 @@
   })
 </script>
 
-<style scoped>
+<style scoped lang="less" rel="stylesheet/less">
   .nothing{
     width:100%;
     text-align:center;
-    height:60px;
-    line-height:60px;
-    font-size:14px;
+    height:.6rem;
+    line-height:.6rem;
+    font-size:.14rem;
   }
 </style>

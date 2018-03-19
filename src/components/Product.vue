@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="list clear">
-      <li v-for="(item,i) of list" :key="i" :class="showIdx==i?'list-item lf active':'list-item lf'" @click="changePage(item.path,i)">{{item.title+"("+item.count+")"}}</li>
+      <li v-for="(item,i) of list" :key="i" :class="showIdx==i?'list_item lf active':'list_item lf'" @click="changePage(item.path,i)">{{item.title+"("+item.count+")"}}</li>
     </ul>
     <Query></Query>
     <router-view class="route"></router-view>
@@ -34,19 +34,19 @@
   })
 </script>
 
-<style scoped>
-  .list-item{
+<style scoped lang="less" rel="stylesheet/less">
+  .list_item{
     cursor: pointer;
-    width:116px;
+    width:1.16rem;
     text-align:center;
-    padding:8px 0;
+    padding:.08rem 0;
     border-bottom:1px solid #D7D7D7;
     border-right:1px solid #D7D7D7;
     background:#F2F3F5;
-    font-size:14px;
+    font-size:.14rem;
     font-weight:bold
   }
-  .list-item:hover{
+  .list_item:hover{
     color:#C90000
   }
   .active{
@@ -54,6 +54,6 @@
     border-bottom:none;
   }
   .route{
-    min-height:50px;
+    min-height:.5rem;
   }
 </style>

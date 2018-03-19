@@ -1,7 +1,7 @@
 <template>
   <div class="out">
     <div class="lf">
-      <img src="../assets/img/about/SH101950.jpg" alt="">
+      <img src="../assets/img/about/SH101950.jpg" alt="公司图片">
     </div>
     <p>
       苏州埃兰分析仪器有限公司坐落于风景如画的长江三角洲地区的地理中心，太湖之滨的苏州。是精密分析仪器的制造商，主要从事分析仪器的研发、制造、销售及售后服务。
@@ -38,16 +38,18 @@
   })
 </script>
 
-<style scoped>
+<style scoped lang="less" rel="stylesheet/less">
   .out{
-    padding:20px;
-  }
-  .out>div:first-child{
-    padding:5px;
-    border:1px solid #ddd;
-    margin:10px;
-  }
-  .out>p{
-    margin:5px;
+    font-size:.16rem;
+    padding:.2rem;
+
+    >div:first-child{
+      padding:.05rem;
+      border:1px solid #ddd;
+      margin:.1rem;
+    }
+    >p{
+      margin:.05rem;
+    }
   }
 </style>
